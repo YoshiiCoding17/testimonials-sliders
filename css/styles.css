@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+:root{
+    --darkBlue: hsl(240, 38%, 20%);
+    --grayishBlue: hsl(240, 18%, 77%);
+}
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*,*::before,*::after{
+    box-sizing: inherit;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    font-family: 'Inter', sans-serif;
+}
+@media (min-width: 768px) {
+    body{
+        justify-content: unset;
+    }
+}
+img{
+    max-width: 100%;
+    display: block;
+}
+.container{
+    max-width: 80rem;
+    width: 90%;
+}
+@media (min-width: 768px) {
+    .container{
+        margin: 0 auto;
+        max-width: 120rem;
+    }
+}
+/* Card */
+
+@media (min-width: 768px) {
+    .card{
+        display: grid;
+        grid-template-columns: 55% 1fr;
+        align-items: center;
+    }
+    .card__content{
+        grid-column: 2/3;
+    }
+}
+.card__image{
+    position: relative;
+    padding: 3.3rem;
+    z-index: 1;
+    border-radius: 2rem;
+}
+.card__image .image{
+    border-radius: 2rem;
+    box-shadow: -23px 31px 67px -35px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -23px 31px 67px -35px rgba(0,0,0,0.75);
+    -moz-box-shadow: -23px 31px 67px -35px rgba(0,0,0,0.75);
+}
+.card__image .image__background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20rem;
+    background-color: whitesmoke;
+    width: 23%;
+    padding: 1rem;
+    gap: 1.3rem;
+    margin: -5rem auto 0 auto;
+    position: relative;
+    z-index: 2;
+}
+@media (min-width: 768px) {
+    .buttons{
+        width: 15%;
+        margin:-5rem 0 0 10rem;
+    }
+}
+.buttons__previous,.buttons__next{
+    background-color: transparent;
+    border: none;
+}
+.buttons__previous,.buttons__next{
+    cursor: pointer;
+}
+.quote{
+    margin-top: 3rem;
+    background: url("../images/pattern-quotes.svg") no-repeat top center;
+    background-size: 20%;
+}
+@media (min-width: 768px) {
+    .quote{
+        background-position-x: 15%;
+    }
+}
+.quote__content{
+    text-align: center;
+    padding-top: 1rem;
+}
+.quote__p{
+    font-weight: 300;
+    color:var(--darkBlue)
+}
+.quote__name{
+    font-weight: 600;
+    color: var(--darkBlue);
+}
+.quote__rol{
+    color: var(--grayishBlue);
+}
+@media (min-width: 768px) {
+    .quote{
+        grid-row: 1/2;
+    }
+    .quote__data{
+        display: flex;
+        gap: 1rem;
+    }
+    .quote__p{
+        text-align: left;
+        font-size: 3.2rem;
+    }
+    .quote__name{
+        text-align: left;
+    }
+    .quote__rol{
+        text-align: left;
+    }
+}
+
